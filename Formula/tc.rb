@@ -5,21 +5,21 @@
 class Tc < Formula
   desc ""
   homepage "https://tidalcontrol.com/"
-  version "0.0.2"
+  version "0.0.3"
   license "gpl-3.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/tidalcontrol/cli/releases/download/v0.0.2/tc_0.0.2_macos_arm64.tar.gz"
-      sha256 "3de367edcae4627ec2ae48c2db86cbb201762fffa06caa7b264980cd9a75e315"
+      url "https://github.com/tidalcontrol/cli/releases/download/v0.0.3/tc_0.0.3_macos_arm64.tar.gz"
+      sha256 "e56727761a7ccb4b092e6aa7bb2e25fc7c93b7c67a3bfa9e666e6fe81c66a8bb"
 
       def install
         bin.install "tc"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/tidalcontrol/cli/releases/download/v0.0.2/tc_0.0.2_macos_amd64.tar.gz"
-      sha256 "5e638b4a4d8fab9ac75e7be0fbde749a4e55a5d611bbfd62f187ebfc824f62b0"
+      url "https://github.com/tidalcontrol/cli/releases/download/v0.0.3/tc_0.0.3_macos_amd64.tar.gz"
+      sha256 "ee49175e8805cb290fa124824e3cde02394a34981d7e055070fd935a5084f889"
 
       def install
         bin.install "tc"
@@ -29,24 +29,24 @@ class Tc < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/tidalcontrol/cli/releases/download/v0.0.2/tc_0.0.2_linux_arm64.tar.gz"
-      sha256 "43d796cdefadd833fa5427b9601bda1e102542cc61bac2111a746510ed78d834"
-
-      def install
-        bin.install "tc"
-      end
-    end
-    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/tidalcontrol/cli/releases/download/v0.0.2/tc_0.0.2_linux_armv6.tar.gz"
-      sha256 "4de6132cd9f738e182348b9890591953de3e93d3c75b2dfd91e3df0d04860cef"
+      url "https://github.com/tidalcontrol/cli/releases/download/v0.0.3/tc_0.0.3_linux_arm64.tar.gz"
+      sha256 "05b02a6e5f3f2bacf85f9e8d7f82f8b9042ffc9eaaf085c64501bb15063f6965"
 
       def install
         bin.install "tc"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/tidalcontrol/cli/releases/download/v0.0.2/tc_0.0.2_linux_amd64.tar.gz"
-      sha256 "7487736c73c2a84a7ba8537d3e144633a66d4cabec0e7a025ed91605fab3424d"
+      url "https://github.com/tidalcontrol/cli/releases/download/v0.0.3/tc_0.0.3_linux_amd64.tar.gz"
+      sha256 "ebb23e1588b0b6918854731ef1e2323bf26ac3baa41282fa4706803ce23e303e"
+
+      def install
+        bin.install "tc"
+      end
+    end
+    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
+      url "https://github.com/tidalcontrol/cli/releases/download/v0.0.3/tc_0.0.3_linux_armv6.tar.gz"
+      sha256 "770da429d5207447227477f124ae71a16dc6ac4e9bbbb17b68051ae668731dfd"
 
       def install
         bin.install "tc"
